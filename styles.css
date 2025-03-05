@@ -1,3 +1,4 @@
+
 body{
     padding: auto;
     margin: auto;
@@ -5,6 +6,7 @@ body{
 }
 h1{
     text-align: center;
+  
 }
 
 button, select, input{
@@ -49,7 +51,7 @@ button, select, input{
 .toolbar{
     width:100%;
     height:auto;
-    display:flex;
+    display:inline-flex;
     justify-content:center;
  
     /* gap: 10px; */
