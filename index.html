@@ -7,12 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="editorId"class="editor" contenteditable="true"></div>
-    <div class="toolbar">
-        <button id="btnBold" >Negrito</button>
-        <button id="btnItalic">Itálico</button>
-        <button id="btnUnderline" >Sublinhado</button>
-        
+
+    <div id="container">
+        <div id="block">
+            <h1>Rich Text Editor</h1>
+
+            <div class="toolbar">
+                <button id="btnBold"><strong>B<strong></button>
+                <button id="btnItalic"><em>I</em></button>
+                <button id="btnUnderline"><u>U</u></button>
+                <select id="selector">
+                    <option value="H1">H1</option>
+                    <option value="H2">H2</option>
+                    <option value="H3">H3</option>
+                    <option value="H4">H4</option>
+                    <option value="H5">H5</option>
+                    <option value="H6">H6</option>
+                </select>
+                <input type="color" id="color"/>
+                
+            </div>
+            <div id="editorId"class="editor" contenteditable="true"></div>
+           
+        </div>
     </div>
     <script src="script.js">
     </script>
