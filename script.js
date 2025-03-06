@@ -6,7 +6,9 @@ const btnUnderline = document.getElementById("btnUnderline");
 const selector = document.getElementById("selector")
 const color = document.getElementById("color");
 const font = document.getElementById("font");
+const fontSize = document.getElementById("sizeFont");
 
+let sizeFont = new Array(10);
 let fontList =[
     "Arial",
     "Verdana",
@@ -15,14 +17,35 @@ let fontList =[
     "Georgia",
     "Courier New",
     "cursive"
-]
+] 
 
-fontList.map((value) =>{
-    let option = document.createElement("option");
-    option.value = value;
-    option.innerHTML = value;
-    font.appendChild(option);
-});
+
+function init()
+{
+
+    let index = 0;
+    for(let i = 1; i<10; i++ )
+    {
+        sizeFont[index] = i;
+        index++;
+    }
+    fontList.map((value) =>{
+        let option = document.createElement("option");
+        option.value = value;
+        option.innerHTML = value;
+        font.appendChild(option);
+    });
+
+  
+
+    sizeFont.map((value) =>{
+        let option = document.createElement("option");
+        option.value = value;
+        option.innerHTML = value;
+        fontSize.appendChild(option);
+    });
+}
+
 
 btnBold.addEventListener("click", function(){
     if(editor.style.fontWeight!="bold"){
@@ -57,8 +80,14 @@ font.addEventListener("change", function(){
     document.execCommand("fontName",false, this.value);
 })
 
+fontSize.addEventListener("change", function(){
+    document.execCommand("fontSize",false, this.value);
+})
+
 function formatText(command, value)
 {
     document.execCommand(command, false, value);
     
 }
+
+init();
