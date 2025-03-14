@@ -4,7 +4,7 @@ Um editor de texto simples desenvolvido com <strong>HTML, CSS e JavaScript</stro
 
 🚀 Demonstração
 
-Acesse o projeto online através do link: <a href="https://leoluigy.github.io/RichText-Editor/"  target="_blank">RichText Editor</a>
+Acesse o projeto online através do link: <a href="https://leoluigy.github.io/RichText-Editor/"  target="_blank" rel="noopener noreferrer">RichText Editor</a>
 
 📚 Funcionalidades
 
